@@ -1,16 +1,21 @@
-import { Button, Container, Grid, CircularProgress, TextField, Typography } from '@mui/material';
+import { Button, Container, Grid, CircularProgress, TextField, Typography, Alert } from '@mui/material';
 import React, { useState } from 'react';
 import Navigation from '../../Shared/Navigation/Navigation';
 import login from  '../../../images/login/login.png';
 import { Link } from 'react-router-dom';
 import { NavLink } from 'react-router-dom';
 import useAuth from '../../../hooks/useAuth';
+import { useLocation } from 'react-router-dom';
+import { useHistory } from 'react-router-dom';
 
 const Login = () => {
 
     const [loginData,setLoginData] = useState({});
 
-    const {user,loginUser,isLoading,authError}= useAuth()
+    const {user,loginUser,isLoading,authError}= useAuth();
+
+    const location = useLocation();
+    const history = useHistory()
 
     const handleOnChange =(e)=>{
         const field = e.target.name;
@@ -22,7 +27,7 @@ const Login = () => {
     };
 
     const handleOnSubmit=(e)=>{
-        loginUser(loginData.email,loginData.password);
+        loginUser(loginData.email,loginData.password,location,history);
         alert('Sure ?')
         e.preventDefault();
     }
@@ -61,7 +66,6 @@ const Login = () => {
                         </NavLink>
                     {isLoading && <CircularProgress/>} 
                     {user?.email && <Alert severity="success">Your Account Created Successfully</Alert>}
-                    
                     {authError && <Alert severity="error">{authError} </Alert>}
                     </form>
                     </Grid>
