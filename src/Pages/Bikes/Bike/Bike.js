@@ -1,15 +1,9 @@
-import { Grid } from '@mui/material';
+import { Card, CardContent, CardMedia, Grid, Typography } from '@mui/material';
 import React from 'react';
-import Card from '@mui/material/Card';
-import CardActions from '@mui/material/CardActions';
-import CardContent from '@mui/material/CardContent';
-import CardMedia from '@mui/material/CardMedia';
-import Typography from '@mui/material/Typography';
 
-const Product = ({bike}) => {
-    const {name,img,description,price}= bike;
+const Bike = ({bike}) => {
+    const {img,id,name,description,price}=bike;
     return (
-        // <Grid container spacing={2}>
         <Grid item xs={4} sm={4} md={4}>        
         <Card sx={{ minWidth: 275 }} >
             <CardMedia
@@ -34,9 +28,7 @@ const Product = ({bike}) => {
         </CardContent>
           </Card>
          </Grid>
-
-// </Grid>
     );
 };
 
-export default Product;
+export default Bike;
