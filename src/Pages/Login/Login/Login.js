@@ -1,18 +1,16 @@
-import { Button, Container, Grid, TextField, Typography } from '@mui/material';
+import { Button, Container, Grid, CircularProgress, TextField, Typography } from '@mui/material';
 import React, { useState } from 'react';
 import Navigation from '../../Shared/Navigation/Navigation';
 import login from  '../../../images/login/login.png';
 import { Link } from 'react-router-dom';
 import { NavLink } from 'react-router-dom';
+import useAuth from '../../../hooks/useAuth';
 
 const Login = () => {
 
-    const [loginData,setLoginData] = useState({})
+    const [loginData,setLoginData] = useState({});
 
-    const handleOnSubmit=(e)=>{
-        alert('Sure ?')
-        e.preventDefault();
-    }
+    const {user,loginUser,isLoading,authError}= useAuth()
 
     const handleOnChange =(e)=>{
         const field = e.target.name;
@@ -21,6 +19,12 @@ const Login = () => {
         newLoginData[field]=value;
         setLoginData(newLoginData);
         // console.log(field,value)
+    };
+
+    const handleOnSubmit=(e)=>{
+        loginUser(loginData.email,loginData.password);
+        alert('Sure ?')
+        e.preventDefault();
     }
 
     return (
@@ -55,6 +59,10 @@ const Login = () => {
                         <NavLink to='/register' style={{textDecoration:'none'}}>
                           <Button  variant='text'>Register Your Account</Button>
                         </NavLink>
+                    {isLoading && <CircularProgress/>} 
+                    {user?.email && <Alert severity="success">Your Account Created Successfully</Alert>}
+                    
+                    {authError && <Alert severity="error">{authError} </Alert>}
                     </form>
                     </Grid>
                     <Grid item xs={12} md={6} >

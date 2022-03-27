@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import Navigation from '../../Shared/Navigation/Navigation';
 import login from '../../../images/login/login.png';
-import { Button, CircularProgress, Container, Grid, TextField, Typography } from '@mui/material';
+import { Alert, Button, CircularProgress, Container, Grid, TextField, Typography } from '@mui/material';
 import { NavLink } from 'react-router-dom';
 import useAuth from '../../../hooks/useAuth';
 
@@ -9,7 +9,7 @@ const Register = () => {
 
     const [loginData,setLoginData] = useState({});
 
-    const {registerUser,isLoading} = useAuth()
+    const {user, registerUser,isLoading,authError} = useAuth()
     const handleOnSubmit=(e)=>{
         if(loginData.password !== loginData.password2){
             alert('Password Not Matched');
@@ -79,12 +79,14 @@ const Register = () => {
                           <Button  variant='text'>Already Registered! Login Here</Button>
                         </NavLink>
                     </form>} 
-                    {isLoading && <CircularProgress/>}
+                    {isLoading && <CircularProgress/>} 
+                    {user?.email && <Alert severity="success">Your Account Created Successfully</Alert>}
+                    
+                    {authError && <Alert severity="error">{authError} </Alert>}
                     </Grid>
                     <Grid item xs={12} md={6} >
                         <img style={{width:"100%"}} src={login} alt="" />
-                    </Grid>
-            
+                    </Grid>            
                 </Grid>
             </Container>
         </>
