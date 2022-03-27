@@ -1,19 +1,21 @@
 import React, { useState } from 'react';
 import Navigation from '../../Shared/Navigation/Navigation';
 import login from '../../../images/login/login.png';
-import { Button, Container, Grid, TextField, Typography } from '@mui/material';
+import { Button, CircularProgress, Container, Grid, TextField, Typography } from '@mui/material';
 import { NavLink } from 'react-router-dom';
+import useAuth from '../../../hooks/useAuth';
 
 const Register = () => {
 
     const [loginData,setLoginData] = useState({});
 
+    const {registerUser,isLoading} = useAuth()
     const handleOnSubmit=(e)=>{
         if(loginData.password !== loginData.password2){
             alert('Password Not Matched');
             return 
         }
-       
+       registerUser(loginData.email,loginData.password)
         e.preventDefault();
     }
 
@@ -35,7 +37,7 @@ const Register = () => {
                     <Typography variant="h4"  gutterBottom component="div">
                         Register Here
                     </Typography>
-                    <form onSubmit={handleOnSubmit}>
+                   {!isLoading && <form onSubmit={handleOnSubmit}>
                         <TextField 
                         sx={{width:'75%',m:1}}
                         id="standard-basic" 
@@ -76,7 +78,8 @@ const Register = () => {
                         <NavLink to='/login' style={{textDecoration:'none'}}>
                           <Button  variant='text'>Already Registered! Login Here</Button>
                         </NavLink>
-                    </form>
+                    </form>} 
+                    {isLoading && <CircularProgress/>}
                     </Grid>
                     <Grid item xs={12} md={6} >
                         <img style={{width:"100%"}} src={login} alt="" />
