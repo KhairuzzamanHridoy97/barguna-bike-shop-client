@@ -9,6 +9,7 @@ import {
 import Home from './Pages/Home/Home/Home';
 import Bikes from './Pages/Bikes/Bikes/Bikes';
 import Login from './Pages/Login/Login/Login';
+import Register from './Pages/Login/Register/Register';
 
 function App() {
   return (
@@ -28,7 +29,7 @@ function App() {
             <Login></Login>
           </Route>
           <Route path='/register'>
-            <Login></Login>
+            <Register></Register>
           </Route>
         </Switch>
       </Router>

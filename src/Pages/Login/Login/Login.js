@@ -3,6 +3,7 @@ import React, { useState } from 'react';
 import Navigation from '../../Shared/Navigation/Navigation';
 import login from  '../../../images/login/login.png';
 import { Link } from 'react-router-dom';
+import { NavLink } from 'react-router-dom';
 
 const Login = () => {
 
@@ -51,9 +52,9 @@ const Login = () => {
                         variant="standard" 
                         />
                         <Button type='submit' sx={{width:'75%',m:1}} variant='contained'>Login</Button>
-                        <Link to='/register' style={{textdecoration:'none'}}>
-                          <Button sx={{width:'75%',m:1}} variant='text'>Register Your Account</Button>
-                        </Link>
+                        <NavLink to='/register' style={{textDecoration:'none'}}>
+                          <Button  variant='text'>Register Your Account</Button>
+                        </NavLink>
                     </form>
                     </Grid>
                     <Grid item xs={12} md={6} >
