@@ -3,6 +3,7 @@ import { Carousel } from 'react-bootstrap';
 import banner1 from '../../../images/carusel/banner1.jpg'
 import banner2 from '../../../images/carusel/banner2.jpg'
 import banner4 from '../../../images/carusel/banner4.jpg'
+import banner5 from '../../../images/carusel/banner5.jpg'
 
 const Banner = () => {
     return (
@@ -11,34 +12,41 @@ const Banner = () => {
         <Carousel.Item interval={1000}>
             <img
             className="d-block w-100"
-            src={banner1}
+            src={banner2}
             alt="First slide"
             />
             <Carousel.Caption>
-            <h3>First slide label</h3>
-            <p>Nulla vitae elit libero, a pharetra augue mollis interdum.</p>
+            <h2>WELCOME TO OUR STORE</h2>
+            <p>Find Your Favourite Car In Our Store</p>
+            <button className="btn btn-info mx-2">Getting Start</button>
+            <button className="btn btn-outline-light">About Us</button> 
+
             </Carousel.Caption>
         </Carousel.Item>
         <Carousel.Item interval={500}>
             <img
             className="d-block w-100"
-            src={banner2}
+            src={banner4}
             alt="Second slide"
             />
             <Carousel.Caption>
-            <h3>Second slide label</h3>
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+            <h2>WELCOME TO OUR STORE</h2>
+            <p>Find Your Favourite Car In Our Store</p>
+            <button className="btn btn-info mx-2">Getting Start</button>
+            <button className="btn btn-outline-light">About Us</button> 
             </Carousel.Caption>
         </Carousel.Item>
         <Carousel.Item>
             <img
             className="d-block w-100"
-            src={banner4}
+            src={banner5}
             alt="Third slide"
             />
             <Carousel.Caption>
-            <h3>Third slide label</h3>
-            <p>Praesent commodo cursus magna, vel scelerisque nisl consectetur.</p>
+            <h2>WELCOME TO OUR STORE</h2>
+            <p>Find Your Favourite Car In Our Store</p>
+            <button className="btn btn-info mx-2">Getting Start</button>
+            <button className="btn btn-outline-light">About Us</button> 
             </Carousel.Caption>
         </Carousel.Item>
         </Carousel>
