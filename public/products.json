@@ -1,0 +1,75 @@
+[
+    {
+        "id":1,
+        "name":"Yamaha FZ V2",
+        "img":"https://i.ibb.co/wWvWrBX/Yamaha-FZ2-1.jpg",
+        "description":"It behaves well both in the city and on the highway, has excellent brakes and tyres and a refined engine and gearbox. It seats you comfortably even on long hauls. It has enough power to take you to office or for a weekend ride if speed isn't your only thing.",
+        "price": 210000
+    },
+    {
+        "id":2,
+        "name":"Bajaj Pulsar 150",
+        "img":"https://i.ibb.co/Y0T5Gbn/pulsar-150-2.png",
+        "description":"Apart from providing good performance, the 150cc segment motorcycles are decently fuel efficient as well. This allows the rider to enjoy the performance without worrying about running cost. The Bajaj Pulsar 150 made use of technology to deliver good mileage.",
+        "price": 169000
+    },
+    {
+        "id":3,
+        "name":"GSX R150",
+        "img":"https://i.ibb.co/0j0KVH8/suzuki-gsx-s150-3.jpg",
+        "description":"The GSX R150 is a good bike for your part-time travel needs but it cannot be a great everyday bike that is for sure. The sporty riding position of this bike makes it very uncomfortable for me to ride it for long hours in city traffic.",
+        "price": 379950
+    },
+    {
+        "id":4,
+        "name":"Yamaha R15 ",
+        "img":"https://i.ibb.co/jGXCbhv/Yamaha-r15-4.png",
+        "description":"The R15 V3 runs on 17-inch tubeless tyres and its rear tyre is a radial unit that offers superb grip and also aids in handling characteristics of the motorcycle. Pricing - The Yamaha R15 V3 is one of the most affordable fully-faired bikes in Bangladesh with good performance ",
+        "price": 485000
+    },
+    {
+        "id":5,
+        "name":"Honda X Blade",
+        "img":"https://i.ibb.co/5LQX352/honda-x-blade-5.jpg",
+        "description":"The X Blade has the sportiest attitude of the three 160s in HMSI's range but it's not the most powerful. Its 162.7cc motor produces 13.9hp at 8,500rpm, which is 0.1hp more than the CB Unicorn 160 but 0.9hp less than the Hornet .",
+        "price": 174900
+    },
+    {
+        "id":6,
+        "name":"Suzuki Gixxer SF 250 ",
+        "img":"https://i.ibb.co/FWJvkSn/Suzuki-Gixxer-6.jpg",
+        "description":"Overall the Gixxer SF 250 can be a great choice as a beginner's motorcycle, as it teaches the rider all the nuances of going fast while giving him a considerable margin of error. Its torquey ride is smoothly complemented by its nimble body .",
+        "price": 302000
+    },
+    {
+        "id":7,
+        "name":"Hero Thriller 160R",
+        "img":"https://i.ibb.co/P65Jmvt/hero-thriller-7.jpg",
+        "description":"Excellent power integration with the light weighted body structure makes this bike supper fast according to Hero. Comparing this bike to other 160cc bike at its territory, this bike is one step ahead .",
+        "price": 184990
+    },
+   
+    {
+        "id":8,
+        "name":"TVS Apache RTR 160 ",
+        "img":"https://i.ibb.co/YtNYrrr/rtr-200-4v-apache-200-race-8.png",
+        "description":"You will find good low & mid-range torque, hence good ready pickup. The engine is refined and I love the way it revs up to 7000 RPM. Pass 7000 RPM you will feel the vibration on the footpeg, handlebar & on the fuel tank but that is manageable like its competitors.",
+        "price": 186900
+    },
+    {
+        "id":9,
+        "name":"Aprilia GPR 150",
+        "img":"https://i.ibb.co/p11XmMT/aprilia-gpr-150-9.jpg",
+        "description":"This bike design might look similar to its younger version RS4 125, but practically it is bolder, and better than that model. Aprilia GPR 150 has Aerodynamic sports full fairing with MotoGP graphics, which makes outlook more eye catchy.",
+        "price": 366000
+    }
+]
+
+
+
+
+
+
+
+
+
