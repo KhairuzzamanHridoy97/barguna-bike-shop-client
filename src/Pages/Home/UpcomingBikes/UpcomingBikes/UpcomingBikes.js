@@ -25,7 +25,7 @@ const upcomingBikes=[
         'img': upcoming3
     },
     {
-        "name":"Kawasaki Ninja ZX 14r",
+        "name":"Kawasaki Ninja ZX",
         "speed":'(208.1 mph / 334.7 kph)',
         'img': upcoming4
     },

@@ -11,6 +11,7 @@ import Bikes from './Pages/Bikes/Bikes/Bikes';
 import Login from './Pages/Login/Login/Login';
 import Register from './Pages/Login/Register/Register';
 import AuthProvider from './Contexts/AuthProvider/AuthProvider';
+import Buy from './Pages/Buy/Buy';
 
 function App() {
   return (
@@ -32,6 +33,9 @@ function App() {
             </Route>
             <Route path='/register'>
               <Register></Register>
+            </Route>
+            <Route path='/buy/:bikeId'>
+              <Buy></Buy>
             </Route>
           </Switch>
         </Router>

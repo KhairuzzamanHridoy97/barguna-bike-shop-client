@@ -10,7 +10,7 @@ const UpcomingBike = ({upcomingBike}) => {
         <Card className="latestOffer-Card"  sx={{ minWidth: 275 }}>
             <CardMedia
               component="img"
-              className='upcoming'
+              className='upcoming-img'
               style={{ width: 'auto', height: '150px',margin:'0 auto'}}
               image={img}
         />
