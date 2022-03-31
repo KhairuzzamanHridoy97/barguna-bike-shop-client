@@ -3,7 +3,7 @@ import { useForm } from 'react-hook-form';
 import { useParams } from 'react-router';
 import useAuth from '../../hooks/useAuth';
 
-// purchase page making
+// buy page making
 const Purchase = () => {
     const {bikeId } = useParams({});
     const [product, setProduct] = useState({});

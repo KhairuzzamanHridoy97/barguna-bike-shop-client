@@ -18,7 +18,7 @@ import Typography from '@mui/material/Typography';
 import { Button } from '@mui/material';
 import AddProduct from '../AddProduct/AddProduct';
 
-// import ManageAllOrders from '../ManageAllOrders/ManageAllOrders';
+import ManageAllOrders from '../ManageAllOrders/ManageAllOrders';
 // import MyOrder from '../MyOrder/MyOrder';
 // import MakeAdmin from '../MakeAdmin/MakeAdmin';
 import useAuth from '../../../hooks/useAuth';
@@ -55,12 +55,12 @@ function Dashboard(props) {
               <Link style={{ textDecoration: 'none' }} to={`${url}/manageProduct`}>
                   <Button color="inherit">Manage Product</Button>
               </Link>
-          {/* {
-              admin &&  
-              <Box>  
               <Link style={{ textDecoration: 'none' }} to={`${url}/manageAllOrders`}>
                   <Button color="inherit">Manage Orders</Button>
               </Link>
+          {/* {
+              admin &&  
+              <Box>  
               <Link style={{ textDecoration: 'none' }} to={`${url}/makeAdmin`}>
                   <Button color="inherit">Make Admin</Button>
               </Link>
@@ -167,6 +167,9 @@ function Dashboard(props) {
                 </Route>
               <Route path={`${path}/manageProduct`}>
                   <ManageProduct></ManageProduct>
+              </Route>
+              <Route path={`${path}/manageAllOrders`}>
+                  <ManageAllOrders></ManageAllOrders>
               </Route>
     
        </Switch>

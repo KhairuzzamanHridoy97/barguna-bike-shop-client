@@ -6,16 +6,15 @@ import TableContainer from '@mui/material/TableContainer';
 import TableHead from '@mui/material/TableHead';
 import TableRow from '@mui/material/TableRow';
 import Paper from '@mui/material/Paper';
-import useAuth from '../../../hooks/useAuth';
 
 
-const ManageProduct = () => {
-    const [products,setProducts]= useState([]);
+const ManageAllOrders = () => {
+    const [allOrders,setAllOrders]= useState([]);
 
     useEffect(()=>{
-        fetch('http://localhost:5000/products')
+        fetch('http://localhost:5000/orders')
         .then(res=>res.json())
-        .then(data=>setProducts(data))
+        .then(data=>setAllOrders(data))
     },[]);
 
     // deleteOrder
@@ -23,7 +22,7 @@ const ManageProduct = () => {
         console.log(id);
         const proceed = window.confirm("Are you sure, you want to delete?");
         if (proceed) {
-            fetch(`http://localhost:5000/products/${id}`, {
+            fetch(`http://localhost:5000/deleteOrder/${id}`, {
                 method: 'DELETE'
             })
                 .then(res => res.json())
@@ -31,8 +30,8 @@ const ManageProduct = () => {
                     console.log(data);
                     if (data.deletedCount > 0) {
                         alert("Deleted Successfully");
-                        const remainingOrders = products?.filter(product => product._id !== id);
-                        setProducts(remainingOrders);
+                        const remainingOrders = allOrders?.filter(allOrder => allOrder._id !== id);
+                        setAllOrders(remainingOrders);
                     }
                 });
             console.log(id);
@@ -41,32 +40,32 @@ const ManageProduct = () => {
 
     return (
         <div>
-            <h2 className='text-primary m-2'>Total Products: {products.length}</h2>
+            <h2 className='text-primary m-2'>Total Orders: {allOrders.length}</h2>
             <TableContainer component={Paper}>
       <Table sx={{ minWidth: 650 }} aria-label="simple table">
         <TableHead>
           <TableRow>
             <TableCell>Name</TableCell>
+            <TableCell align="right">Email</TableCell>
+            <TableCell align="right">Product Name</TableCell>
             <TableCell align="right">Product Price</TableCell>
-            <TableCell align="right">Image</TableCell>
             <TableCell align="right">Action</TableCell>
           </TableRow>
         </TableHead>
         <TableBody>
-          {products.map((product) => (
+          {allOrders.map((allOrder) => (
             <TableRow
-              key={product._id}
+              key={allOrder._id}
               sx={{ '&:last-child td, &:last-child th': { border: 0 } }}
             >
               <TableCell component="th" scope="row">
-                {product.name}
+                {allOrder.name}
               </TableCell>
-              <TableCell align="right">{product.price}</TableCell>
+              <TableCell align="right">{allOrder.email}</TableCell>
+              <TableCell align="right">{allOrder.name}</TableCell>
+              <TableCell align="right">{allOrder.price}</TableCell>
               <TableCell align="right">
-                  <img src={product.img} style={{ height: '50px', width: '50px' }} alt="" />
-              </TableCell>
-              <TableCell align="right">
-                  <button onClick={()=>handleDeleteAllOrder(product._id)} className="btn btn-danger">Delete</button>
+                  <button onClick={()=>handleDeleteAllOrder(allOrder._id)} className="btn btn-danger">Delete</button>
               </TableCell>
              
             </TableRow>
@@ -79,4 +78,4 @@ const ManageProduct = () => {
     );
 };
 
-export default ManageProduct;
+export default ManageAllOrders;
