@@ -19,7 +19,7 @@ import { Button } from '@mui/material';
 import AddProduct from '../AddProduct/AddProduct';
 
 import ManageAllOrders from '../ManageAllOrders/ManageAllOrders';
-// import MyOrder from '../MyOrder/MyOrder';
+import MyOrder from '../MyOrder/MyOrder';
 // import MakeAdmin from '../MakeAdmin/MakeAdmin';
 import useAuth from '../../../hooks/useAuth';
 import ManageProduct from '../ManageProduct/ManageProduct';
@@ -69,20 +69,21 @@ function Dashboard(props) {
 
            {/* ---- */}
 
-          {/* {
-            !admin && <Box>
-                <Link style={{ textDecoration: 'none' }} to={`${url}/myOrder`}>
+          
+           
+             
+            <Link style={{ textDecoration: 'none' }} to={`${url}/myOrder`}>
               <Button color="inherit">My Order</Button>
           </Link>
-          <Link style={{ textDecoration: 'none' }} to={`${url}/addReview`}>
+          {/* <Link style={{ textDecoration: 'none' }} to={`${url}/addReview`}>
               <Button color="inherit">Add Review</Button>
           </Link>
           <Link style={{ textDecoration: 'none' }} to={`${url}/payment`}>
               <Button color="inherit">Payment</Button>
           </Link>
-            </Box>
+         */}
             
-          } */}
+     
               
           
          
@@ -170,6 +171,9 @@ function Dashboard(props) {
               </Route>
               <Route path={`${path}/manageAllOrders`}>
                   <ManageAllOrders></ManageAllOrders>
+              </Route>
+              <Route path={`${path}/myOrder`}>
+                 <MyOrder></MyOrder>
               </Route>
     
        </Switch>
