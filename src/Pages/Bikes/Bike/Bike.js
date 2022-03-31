@@ -3,7 +3,7 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 
 const Bike = ({bike}) => {
-    const {img,id,name,description,price}=bike;
+    const {img,_id,name,description,price}=bike;
     return (
         <Grid item xs={4} sm={4} md={4}>        
         <Card sx={{ minWidth: 275 }} >
@@ -22,7 +22,7 @@ const Bike = ({bike}) => {
           <Typography variant="body2" sx={{ my:1 }} className="text-danger" >
             Price : {price} BDT
             </Typography>
-           <Link to={`/buy/${id}`}>
+           <Link to={`/buy/${_id}`}>
                <button className='btn btn-success' sx={{ my:1 }} >Buy</button> 
            </Link>
             

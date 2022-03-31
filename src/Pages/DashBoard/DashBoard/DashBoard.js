@@ -16,12 +16,13 @@ import MenuIcon from '@mui/icons-material/Menu';
 import Toolbar from '@mui/material/Toolbar';
 import Typography from '@mui/material/Typography';
 import { Button } from '@mui/material';
-// import AddProduct from '../AddProduct/AddProduct';
-// import ManageProducts from '../ManageProducts/ManageProducts';
+import AddProduct from '../AddProduct/AddProduct';
+
 // import ManageAllOrders from '../ManageAllOrders/ManageAllOrders';
 // import MyOrder from '../MyOrder/MyOrder';
 // import MakeAdmin from '../MakeAdmin/MakeAdmin';
 import useAuth from '../../../hooks/useAuth';
+import ManageProduct from '../ManageProduct/ManageProduct';
 // import DashboardHome from '../DashboardHome/DashboardHome';
 // import AdminRoute from '../../Login/AdminRoute/AdminRoute';
 // import AddReview from '../AddReview/AddReview';
@@ -51,12 +52,12 @@ function Dashboard(props) {
                 <Link style={{ textDecoration: 'none' }} to={`${url}/addProduct`}>
                   <Button color="inherit">Add Product</Button>
               </Link>
-          {/* {
-              admin &&  
-              <Box>  
               <Link style={{ textDecoration: 'none' }} to={`${url}/manageProduct`}>
                   <Button color="inherit">Manage Product</Button>
               </Link>
+          {/* {
+              admin &&  
+              <Box>  
               <Link style={{ textDecoration: 'none' }} to={`${url}/manageAllOrders`}>
                   <Button color="inherit">Manage Orders</Button>
               </Link>
@@ -161,30 +162,13 @@ function Dashboard(props) {
          {/* <Route exact path={path}>
             <DashboardHome></DashboardHome>
         </Route> */}
-              {/* <Route path={`${path}/addproduct`}>
+              <Route path={`${path}/addproduct`}>
                   <AddProduct></AddProduct>
-                </Route> */}
-              {/* <AdminRoute path={`${path}/manageProduct`}>
-                  <ManageProducts></ManageProducts>
-              </AdminRoute> */}
-              {/* <AdminRoute path={`${path}/manageAllOrders`}>
-                  <ManageAllOrders></ManageAllOrders>
-              </AdminRoute> */}
-
-              {/* <Route path={`${path}/myOrder`}>
-                  <MyOrder></MyOrder>
-              </Route> */}
-              {/* <Route path={`${path}/addReview`}>
-                  <AddReview></AddReview>
-              </Route> */}
-              {/* <Route path={`${path}/payment`}>
-                  <Payment></Payment>
-              </Route> */}
-{/* 
-              <AdminRoute path={`${path}/makeAdmin`}>
-                  <MakeAdmin></MakeAdmin>
-              </AdminRoute> */}
-              
+                </Route>
+              <Route path={`${path}/manageProduct`}>
+                  <ManageProduct></ManageProduct>
+              </Route>
+    
        </Switch>
       </Box>
     </Box>

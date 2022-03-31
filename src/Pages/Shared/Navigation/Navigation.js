@@ -18,18 +18,18 @@ const Navigation = () => {
                         <Nav.Link as={Link} to="/home">Home</Nav.Link>
                         <Nav.Link as={Link} to="/bikes">Bikes</Nav.Link>
                         {
-             user?.email? 
-             <Box>
-               <NavLink style={{ textDecoration: 'none', color: 'white' }}  to='/dashboard'> 
-             <Button color="inherit">Dashboard</Button>
-           </NavLink>
+                    user?.email? 
+                    <Box>
+                    <NavLink style={{ textDecoration: 'none', color: 'white' }}  to='/dashboard'> 
+                    <Button color="inherit" >Dashboard</Button>
+                </NavLink>
 
-               <Button onClick={logOut} color="inherit">Logout</Button>
-             </Box>
-             :
-             <NavLink style={{ textDecoration: 'none', color: 'white' }}  to='/login'> 
-             <Button color="inherit">Login</Button>
-           </NavLink>
+                    <Button onClick={logOut} color='primary' sx={{my:1}}  >Logout</Button>
+                    </Box>
+                    :
+                    <NavLink style={{ textDecoration: 'none', color: 'white' }}  to='/login'> 
+                    <Button color="inherit">Login</Button>
+                </NavLink>
            }
                         </Navbar.Collapse>                                      
                     </Container>
@@ -67,3 +67,20 @@ export default Navigation;
         //         </Navbar.Collapse>
         //     </Container>
         // </Navbar>
+
+
+
+        
+            // {
+            //     user?.email ?
+
+            //     <Box>
+            //         <Nav.Link as={Link} onClick={logOut} >Logout</Nav.Link>  
+
+            //         <Nav.Link as={Link}  to='/dashBoard' >Dashboard</Nav.Link>  
+            //      </Box>
+                
+            // :
+            //  <Nav.Link as={Link} to="/login">Login</Nav.Link>              
+            // }
+        

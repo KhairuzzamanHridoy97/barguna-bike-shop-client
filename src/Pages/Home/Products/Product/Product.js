@@ -8,7 +8,7 @@ import Typography from '@mui/material/Typography';
 import { Link } from 'react-router-dom';
 
 const Product = ({bike}) => {
-    const {name,img,description,price,id}= bike;
+    const {name,img,description,price,_id}= bike;
     return (
         // <Grid container spacing={2}>
         <Grid item xs={4} sm={4} md={4}>        
@@ -28,7 +28,7 @@ const Product = ({bike}) => {
           <Typography variant="body2" sx={{ my:1 }} className="text-danger" >
             Price : {price} BDT
             </Typography>
-           <Link to={`/buy/${id}`}>
+           <Link to={`/buy/${_id}`}>
                <button className='btn btn-success' sx={{ my:1 }} >Buy</button> 
            </Link>
             

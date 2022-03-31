@@ -36,7 +36,7 @@ function App() {
             <Route path='/register'>
               <Register></Register>
             </Route>
-            <Route path='/dashboard'>
+            <Route path='/dashBoard'>
               <Dashboard></Dashboard>
             </Route>
             <Route path='/buy/:bikeId'> 

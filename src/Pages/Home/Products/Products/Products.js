@@ -6,7 +6,7 @@ const Products = () => {
     const [bikes,setBikes] = useState([]);
 
     useEffect(()=>{
-        fetch('./products.JSON')
+        fetch('http://localhost:5000/products')
         .then(res=>res.json())
         .then(data=>setBikes(data))
     },[])
@@ -19,7 +19,7 @@ const Products = () => {
                 {
                     bikes.slice(0,6).map(bike=>
                             <Product
-                            key={bike.id}
+                            key={bike._id}
                             bike={bike}
                             >
 
