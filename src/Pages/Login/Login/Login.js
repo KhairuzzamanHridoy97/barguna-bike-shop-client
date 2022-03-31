@@ -52,7 +52,7 @@ const Login = () => {
                         label="Email"
                         type="email"
                         name='email'
-                        onChange={handleOnChange} 
+                        onBlur={handleOnChange} 
                         variant="standard" 
                         />
                         <TextField 
@@ -61,7 +61,7 @@ const Login = () => {
                         label="Password"
                         type="password"
                         name='password'
-                        onChange={handleOnChange}  
+                        onBlur={handleOnChange}  
                         variant="standard" 
                         />
                         <Button type='submit' sx={{width:'75%',m:1}} variant='contained'>Login</Button>

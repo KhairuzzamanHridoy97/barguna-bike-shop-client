@@ -12,7 +12,7 @@ const Purchase = () => {
     const { register, handleSubmit, reset, formState: { errors } } = useForm();
 
     useEffect(() => {
-        fetch('http://localhost:5000//products')
+        fetch('http://localhost:5000/products')
             .then(res => res.json())
             .then(data => {
                 const orderProduct = data.find(singleOrder => singleOrder._id == bikeId)
@@ -54,7 +54,7 @@ const Purchase = () => {
 
                     {/* Form Start here */}
                     <div className="col-lg-6 col-sm-12 mb-5">
-                        <h1 className="mt-5 text-center text-info">Please Provide your Information for Purchase</h1>
+                        <h1 className="mt-5 text-center text-success">Provide Information</h1>
                         <div className="login-box w-75 m-auto">
                             <div className="package-box border border d-flex justify-content-center align-items-center p-5">
                                 <div className="login-form">

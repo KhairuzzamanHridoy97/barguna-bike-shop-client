@@ -13,6 +13,7 @@ import Register from './Pages/Login/Register/Register';
 import AuthProvider from './Contexts/AuthProvider/AuthProvider';
 import Buy from './Pages/Buy/Buy';
 import NotFound from './Pages/NotFound/NotFound';
+import Dashboard from './Pages/DashBoard/DashBoard/DashBoard';
 
 function App() {
   return (
@@ -34,6 +35,9 @@ function App() {
             </Route>
             <Route path='/register'>
               <Register></Register>
+            </Route>
+            <Route path='/dashboard'>
+              <Dashboard></Dashboard>
             </Route>
             <Route path='/buy/:bikeId'> 
               <Buy></Buy>
