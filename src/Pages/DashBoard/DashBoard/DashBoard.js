@@ -28,7 +28,7 @@ import AddReview from '../AddReview/AddReview';
 import Payment from '../Payment/Payment';
 
 
-const drawerWidth = 150;
+const drawerWidth = 170;
 
 function Dashboard(props) {
   const { window } = props;

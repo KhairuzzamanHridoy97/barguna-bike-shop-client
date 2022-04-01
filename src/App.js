@@ -14,6 +14,7 @@ import AuthProvider from './Contexts/AuthProvider/AuthProvider';
 import Buy from './Pages/Buy/Buy';
 import NotFound from './Pages/NotFound/NotFound';
 import Dashboard from './Pages/DashBoard/DashBoard/DashBoard';
+import PrivateRoute from './Pages/Login/PrivateRoute/PrivateRoute,';
 
 function App() {
   return (
@@ -39,9 +40,9 @@ function App() {
             <Route path='/dashBoard'>
               <Dashboard></Dashboard>
             </Route>
-            <Route path='/buy/:bikeId'> 
+            <PrivateRoute path='/buy/:bikeId'> 
               <Buy></Buy>
-            </Route>
+            </PrivateRoute>            
             <Route path="*">
               <NotFound></NotFound>
           </Route>

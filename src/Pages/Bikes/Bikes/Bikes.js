@@ -7,7 +7,7 @@ const Bikes = () => {
     const [bikes,setBikes]= useState([]);
 
     useEffect(()=>{
-        fetch('http://localhost:5000/products')
+        fetch('https://pumpkin-crisp-13332.herokuapp.com/products')
         .then(res=>res.json())
         .then(data=>setBikes(data))
     },[])
