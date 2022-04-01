@@ -2,6 +2,7 @@ import React, { useEffect, useState } from 'react';
 import { useForm } from 'react-hook-form';
 import { useParams } from 'react-router';
 import useAuth from '../../hooks/useAuth';
+// import './Buy.css';
 
 // buy page making
 const Purchase = () => {
@@ -44,7 +45,7 @@ const Purchase = () => {
             <div className="review-section">
                 <div className="row">
                     <div class="card col-lg-6 col-sm-12  item-part">
-                        <img src={product.img} class="details-image" alt="..." />
+                        <img src={product.img}  className="details-image" alt="..." />
                         <div class="card-body">
                             <h5 class="card-title text-info">{product.name}</h5>
                             <p class="card-text">{product.description}</p>
@@ -57,7 +58,7 @@ const Purchase = () => {
                         <h1 className="mt-5 text-center text-success">Provide Information</h1>
                         <div className="login-box w-75 m-auto">
                             <div className="package-box border border d-flex justify-content-center align-items-center p-5">
-                                <div className="login-form">
+                                <div className="buy-form">
                                     <form onSubmit={handleSubmit(onSubmit)}>
                                         <input defaultValue={product?.name}
                                             {...register("Name", { required: true })}

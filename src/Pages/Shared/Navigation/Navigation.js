@@ -15,16 +15,16 @@ const Navigation = () => {
                    
                     <Navbar.Toggle />
                         <Navbar.Collapse className="justify-content-end">
-                        <Nav.Link as={Link} to="/home">Home</Nav.Link>
-                        <Nav.Link as={Link} to="/bikes">Bikes</Nav.Link>
+                        <Nav.Link as={Link} to="/home">HOME</Nav.Link>
+                        <Nav.Link as={Link} to="/bikes">BIKES</Nav.Link>
                         {
                     user?.email? 
                     <Box>
                     <NavLink style={{ textDecoration: 'none', color: 'white' }}  to='/dashboard'> 
-                    <Button color="inherit" >Dashboard</Button>
+                    <Button color="inherit" >DASHBOARD</Button>
                 </NavLink>
 
-                    <Button onClick={logOut} color='primary' sx={{my:1}}  >Logout</Button>
+                    <Button onClick={logOut} color='primary' style={{my:1}}  >LOGOUT</Button>
                     </Box>
                     :
                     <NavLink style={{ textDecoration: 'none', color: 'white' }}  to='/login'> 

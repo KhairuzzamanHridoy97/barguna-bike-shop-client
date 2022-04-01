@@ -6,7 +6,6 @@ import TableContainer from '@mui/material/TableContainer';
 import TableHead from '@mui/material/TableHead';
 import TableRow from '@mui/material/TableRow';
 import Paper from '@mui/material/Paper';
-import useAuth from '../../../hooks/useAuth';
 
 
 const ManageProduct = () => {
@@ -67,8 +66,7 @@ const ManageProduct = () => {
               </TableCell>
               <TableCell align="right">
                   <button onClick={()=>handleDeleteAllOrder(product._id)} className="btn btn-danger">Delete</button>
-              </TableCell>
-             
+              </TableCell>             
             </TableRow>
           ))}
         </TableBody>
