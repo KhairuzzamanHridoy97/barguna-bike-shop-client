@@ -20,10 +20,10 @@ import AddProduct from '../AddProduct/AddProduct';
 
 import ManageAllOrders from '../ManageAllOrders/ManageAllOrders';
 import MyOrder from '../MyOrder/MyOrder';
-// import MakeAdmin from '../MakeAdmin/MakeAdmin';
+import MakeAdmin from '../MakeAdmin/MakeAdmin';
 import useAuth from '../../../hooks/useAuth';
 import ManageProduct from '../ManageProduct/ManageProduct';
-// import DashboardHome from '../DashboardHome/DashboardHome';
+import DashboardHome from '../DashboardHome/DashboardHome';
 // import AdminRoute from '../../Login/AdminRoute/AdminRoute';
 // import AddReview from '../AddReview/AddReview';
 // import Payment from '../Payment/Payment';
@@ -58,12 +58,12 @@ function Dashboard(props) {
               <Link style={{ textDecoration: 'none' }} to={`${url}/manageAllOrders`}>
                   <Button color="inherit">Manage Orders</Button>
               </Link>
-          {/* {
-              admin &&  
-              <Box>  
               <Link style={{ textDecoration: 'none' }} to={`${url}/makeAdmin`}>
                   <Button color="inherit">Make Admin</Button>
               </Link>
+          {/* {
+              admin &&  
+              <Box>  
             </Box>
            } */}
 
@@ -160,9 +160,9 @@ function Dashboard(props) {
         
         </Typography>
        <Switch>
-         {/* <Route exact path={path}>
+         <Route exact path={path}>
             <DashboardHome></DashboardHome>
-        </Route> */}
+        </Route>
               <Route path={`${path}/addproduct`}>
                   <AddProduct></AddProduct>
                 </Route>
@@ -174,6 +174,9 @@ function Dashboard(props) {
               </Route>
               <Route path={`${path}/myOrder`}>
                  <MyOrder></MyOrder>
+              </Route>
+              <Route path={`${path}/makeAdmin`}>
+                 <MakeAdmin></MakeAdmin>
               </Route>
     
        </Switch>
