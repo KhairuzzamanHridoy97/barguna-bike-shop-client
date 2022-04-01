@@ -7,10 +7,10 @@ const Footer = () => {
     return (
         <Grid container spacing={3} className='bg-dark text-danger mt-3'>
         <Grid item xs>
-        <p>Home</p>
-            <p>Service</p>
-             <p>Contact</p>
-            <p>About BikeShop</p>
+            <p>
+              BARGUNA BIKE STORE
+            </p>
+            We are providing best Bike in this town.
         </Grid>
         <Grid item xs={6}>
                  <p>Home</p>

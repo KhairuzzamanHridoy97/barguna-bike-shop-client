@@ -25,6 +25,7 @@ import ManageProduct from '../ManageProduct/ManageProduct';
 import DashboardHome from '../DashboardHome/DashboardHome';
 import AdminRoute from '../../Login/Login/AdminRoute/AdminRoute';
 import AddReview from '../AddReview/AddReview';
+import Payment from '../Payment/Payment';
 
 
 const drawerWidth = 150;
@@ -54,7 +55,7 @@ function Dashboard(props) {
               admin &&  
               <Box>  
 
-<Link style={{ textDecoration: 'none' }} to={`${url}/manageAllOrders`}>
+                <Link style={{ textDecoration: 'none' }} to={`${url}/manageAllOrders`}>
                   <Button color="inherit">Manage Orders</Button>
               </Link>
               <Link style={{ textDecoration: 'none' }} to={`${url}/makeAdmin`}>
@@ -75,17 +76,25 @@ function Dashboard(props) {
 
            {/* ---- */}
 
-          
+          {
+            !admin &&
+            <Box>
+              <Link style={{ textDecoration: 'none' }} to={`${url}/myOrder`}>
+                  <Button color="inherit">My Order</Button>
+              </Link>
+              
+              <Link style={{ textDecoration: 'none' }} to={`${url}/addReview`}>
+                  <Button color="inherit">Add Review</Button>
+              </Link>
+              <Link style={{ textDecoration: 'none' }} to={`${url}/payment`}>
+                  <Button color="inherit">Payment</Button>
+              </Link>
+             
+
+            </Box>
+          }
            
              
-          <Link style={{ textDecoration: 'none' }} to={`${url}/myOrder`}>
-              <Button color="inherit">My Order</Button>
-          </Link>
-          
-          <Link style={{ textDecoration: 'none' }} to={`${url}/addReview`}>
-              <Button color="inherit">Add Review</Button>
-          </Link>
-         
         
             
      
@@ -185,6 +194,9 @@ function Dashboard(props) {
               </AdminRoute>
               <Route path={`${path}/addReview`}>
                  <AddReview></AddReview>
+              </Route>
+              <Route path={`${path}/payment`}>
+                 <Payment></Payment>
               </Route>
     
        </Switch>
