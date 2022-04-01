@@ -23,7 +23,8 @@ import MakeAdmin from '../MakeAdmin/MakeAdmin';
 import useAuth from '../../../hooks/useAuth';
 import ManageProduct from '../ManageProduct/ManageProduct';
 import DashboardHome from '../DashboardHome/DashboardHome';
-// import AdminRoute from '../../Login/AdminRoute/AdminRoute';
+import AdminRoute from '../../Login/Login/AdminRoute/AdminRoute';
+
 // import AddReview from '../AddReview/AddReview';
 // import Payment from '../Payment/Payment';
 
@@ -48,23 +49,32 @@ function Dashboard(props) {
           <Link style={{ textDecoration: 'none' }} to='/home'>
               <Button color="inherit">Home</Button>
           </Link>
-                <Link style={{ textDecoration: 'none' }} to={`${url}/addProduct`}>
-                  <Button color="inherit">Add Product</Button>
-              </Link>
-              <Link style={{ textDecoration: 'none' }} to={`${url}/manageProduct`}>
-                  <Button color="inherit">Manage Product</Button>
-              </Link>
-              <Link style={{ textDecoration: 'none' }} to={`${url}/manageAllOrders`}>
+                
+             
+              
+           {
+
+              admin &&  
+              <Box>  
+
+<Link style={{ textDecoration: 'none' }} to={`${url}/manageAllOrders`}>
                   <Button color="inherit">Manage Orders</Button>
               </Link>
               <Link style={{ textDecoration: 'none' }} to={`${url}/makeAdmin`}>
                   <Button color="inherit">Make Admin</Button>
               </Link>
-          {/* {
-              admin &&  
-              <Box>  
-            </Box>
-           } */}
+
+              <Link style={{ textDecoration: 'none' }} to={`${url}/addProduct`}>
+                  <Button color="inherit">Add Product</Button>
+              </Link>
+
+              <Link style={{ textDecoration: 'none' }} to={`${url}/manageProduct`}>
+              <Button color="inherit">Manage Product</Button>
+          </Link>
+
+
+              </Box>
+           } 
 
            {/* ---- */}
 
@@ -162,21 +172,21 @@ function Dashboard(props) {
          <Route exact path={path}>
             <DashboardHome></DashboardHome>
         </Route>
-              <Route path={`${path}/addproduct`}>
+              <AdminRoute path={`${path}/addproduct`}>
                   <AddProduct></AddProduct>
-                </Route>
-              <Route path={`${path}/manageProduct`}>
+                </AdminRoute>
+              <AdminRoute path={`${path}/manageProduct`}>
                   <ManageProduct></ManageProduct>
-              </Route>
-              <Route path={`${path}/manageAllOrders`}>
+              </AdminRoute>
+              <AdminRoute path={`${path}/manageAllOrders`}>
                   <ManageAllOrders></ManageAllOrders>
-              </Route>
+              </AdminRoute>
               <Route path={`${path}/myOrder`}>
                  <MyOrder></MyOrder>
               </Route>
-              <Route path={`${path}/makeAdmin`}>
+              <AdminRoute path={`${path}/makeAdmin`}>
                  <MakeAdmin></MakeAdmin>
-              </Route>
+              </AdminRoute>
     
        </Switch>
       </Box>
