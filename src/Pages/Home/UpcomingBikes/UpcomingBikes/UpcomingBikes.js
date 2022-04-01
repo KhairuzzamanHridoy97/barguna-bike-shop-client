@@ -43,8 +43,7 @@ const upcomingBikes=[
 
 const UpcomingBikes = () => {
     return (
-            <Container>
-                <Divider />
+            <Container>            
                 <Box sx={{ flexGrow: 1 }}>
             <Container>
                 <Typography variant='h3' sx={{fontWeight:500,my:5,color:'success.main'}} component="div">
