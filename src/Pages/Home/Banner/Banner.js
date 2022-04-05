@@ -17,7 +17,7 @@ const Banner = () => {
             />
             <Carousel.Caption>
             <h2>WELCOME TO OUR STORE</h2>
-            <p>Find Your Favourite Car In Our Store</p>
+            <p>Find Your Favourite Bike In Our Store</p>
             <button className="btn btn-info mx-2">Getting Start</button>
             <button className="btn btn-outline-light">About Us</button> 
 
@@ -31,7 +31,7 @@ const Banner = () => {
             />
             <Carousel.Caption>
             <h2>WELCOME TO OUR STORE</h2>
-            <p>Find Your Favourite Car In Our Store</p>
+            <p>Find Your Favourite Bike In Our Store</p>
             <button className="btn btn-info mx-2">Getting Start</button>
             <button className="btn btn-outline-light">About Us</button> 
             </Carousel.Caption>
@@ -44,7 +44,7 @@ const Banner = () => {
             />
             <Carousel.Caption>
             <h2>WELCOME TO OUR STORE</h2>
-            <p>Find Your Favourite Car In Our Store</p>
+            <p>Find Your Favourite Bike In Our Store</p>
             <button className="btn btn-info mx-2">Getting Start</button>
             <button className="btn btn-outline-light">About Us</button> 
             </Carousel.Caption>
