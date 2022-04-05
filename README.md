@@ -1,6 +1,6 @@
 # Project Title : Barguna-Bike-Shop
 
-It's Basically Bike Shop. U Can Buy Your Favourite Bike From Here
+It's Basically Bike Shop. You Can Buy Your Favourite Bike From Here
 
 ## Tech  Used
 
